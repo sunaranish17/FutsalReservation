@@ -1,0 +1,14 @@
+.navbar{
+	border-radius: 0;
+	.navbar-brand{
+		color: #fff;
+	}
+	.navbar-collapse{
+		ul li{
+			a{
+				color: #fff;
+				text-transform: uppercase;
+			}
+		}
+	}
+}

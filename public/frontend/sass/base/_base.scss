@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css?family=Finger+Paint');
+
+body{
+	background-image: url('../img/bg.png');
+}
+// section-padding
+.section-padding{
+	padding: $section-padding;
+}
+.heading{
+	padding-bottom: 30px;
+	text-transform: uppercase;
+	font-weight: bold;
+	font-family: 'Finger Paint', cursive;
+}
+
+.primary_btn{
+	background-color: $primary-color;
+	padding: 10px;
+	width: 150px;
+	text-transform: uppercase;
+	font-weight: bold;
+	border: 2px solid #000;
+	transition: 0.5s;
+	box-shadow: 0 12px 16px 0 rgba(0,0,0,0.25), 0 17px 50px 0 rgba(0,0,0,0.25);
+	color: $secondary-color;
+	margin: 15px 0;
+}
+
+.primary_btn:hover{
+	background-color: $secondary-color;
+	border-color: $primary-color;
+	color: $primary-color;
+	box-shadow: none;
+	
+}

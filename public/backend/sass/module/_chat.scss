@@ -1,0 +1,52 @@
+/*chat-*/
+
+.chat-online-profile li a i {
+
+  position: relative;
+
+  left: -12px;
+
+  top: -10px;
+}
+
+.chat-online-profile li a span i {
+
+  position: relative;
+
+  top: 10px;
+}
+
+.chat-online-profile li a {
+
+  border-bottom: 1px solid #D7D7D7;
+}
+
+.chat-online-profile li a:hover,
+.chat-online-profile li a:focus,
+.chat-online-profile li a:active {
+
+  background: #eeeeee !important;
+
+  border-bottom: 1px solid #688a7e !important;
+}
+
+.chat-online-profile li a:hover span i,
+.chat-online-profile li a:focus span i,
+.chat-online-profile li a:active span i {
+
+  color: #688a7e;
+}
+
+.right-chat-panel {
+
+  max-height: 600px;
+}
+
+.compose-mail {
+
+  width: 95%;
+
+  font-size: 16px;
+
+  border-radius: 0;
+}
