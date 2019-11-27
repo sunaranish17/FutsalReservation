@@ -15,6 +15,9 @@
          </div>
        </div>
        
+       @foreach($data as $data)
+       
+       
           
        <form method="post" action="{{url('setting/update')}}/{{$data->id}}" enctype="multipart/form-data">
         @csrf
@@ -29,7 +32,7 @@
                   <!-- Company  -->
                   <div class="row">
                     <div class="col-md-3"><label >Company:</label></div>
-                    <div class="col-md-9"><input type="text" class="form-control" id="company_name"  name="company_name" value="{{$data->companyName}}"></div>
+                    <div class="col-md-9"><input type="text" class="form-control" id="company_name"  name="company_name" value=""></div>
                   </div>
                   <br>
                   <!-- End of Company -->
@@ -37,7 +40,7 @@
                   <!-- location  -->
                   <div class="row">
                     <div class="col-md-3"><label >Address:</label></div>
-                    <div class="col-md-9"><input type="text" class="form-control" id="location"  name="location" value="{{$data->location}}"></div>
+                    <div class="col-md-9"><input type="text" class="form-control" id="location"  name="location" value=""></div>
                   </div>  
                   <br>
                   <!-- End of location -->
@@ -126,90 +129,7 @@
             </div>
       <!-- End of Left Content -->
 
-      <!-- Right Content -->
-            <div class="col-lg-4">
-              <!-- SEO Bar-->
-                <div class="row">
-                  <div class="col-lg-12">
-                    <ol class="breadcrumb">
-                      <div class="row">
-                        <div class="col-md-12">
-                          <li><i class="fa fa-search"></i>SEO Management</li>
-                        </div>
-                      </div>
-                    </ol>
-                  </div>
-                </div>
-              <!-- End of SEO Bar-->
-
-              <!-- SEO Content -->
-              <div class="form-wrapper well">
-                <div class="form-group">
-
-                  <!-- Caption  -->
-                  <div class="row">
-                    <div class="col-md-3"><label >Caption:</label></div>
-                    <div class="col-md-9"><input type="text" class="form-control" id="caption"  name="caption" value="##"></div>
-                  </div>
-                   <br>
-                  <!-- End of -->
-
-                  <!-- Keywords -->
-                  <div class="row">
-                    <div class="col-md-3"><label >Keywords:</label></div>
-                    <div class="col-md-9"><input type="text" class="form-control" id="keywords"  name="keywords" value="##"></div>
-                  </div>
-                  <br>
-                  <!-- End of -->
-
-                  <!-- Meta Tag -->
-                  <div class="row">
-                    <div class="col-md-3"><label >Meta Tag:</label></div>
-                    <div class="col-md-9"><input type="text" class="form-control" id="metaTag"  name="metaTag" value="##"></div>
-                  </div>
-                  <br>
-                  <!-- End of Meta Tag-->
-
-                  <!-- Meta Description -->
-                  <div class="row">
-                    <div class="col-md-3"><label >Meta Description:</label></div>
-                    <div class="col-md-9"><textarea cols="30" name="metaDescription" id="metaDescription"></textarea></div>
-                  </div>
-                  <br>
-                  <!-- End of Meta Description-->
-
-                </div>
-              </div>
-              <br>
-              <!-- End of SEO Content -->
-
-              <!-- Logo -->
-                <!-- Logo Bar -->
-                <div class="row">
-                  <div class="col-lg-12">
-                    <ol class="breadcrumb">
-                      <div class="row">
-                        <div class="col-md-12">
-                          <li><i class="fa fa-home"></i>Logo Management</li>
-                        </div>
-                      </div>
-                    </ol>
-                  </div>
-                </div>
-                <!-- End of Logo Bar -->
-
-                <!-- Logo Browser  -->
-                <div class="form-wrapper well">
-                  <input type="hidden" name="pic" value="#">
-                  <img src="##" class="img-responsive">
-                  <label>Upload Image</label>
-                 <input type="file" name="image">
-                </div>
-                <!-- End of Logo Browser -->
-              <!-- End of Logo -->
-            </div>
-      <!-- End of Right Content -->
-        </div>
+    
           <br>
     <!-- End of Main Content Form -->
           
@@ -227,6 +147,7 @@
           </div>
           <!-- End of Button Bar -->
         </form>
+        @endforeach
      </section>
    </section>
 

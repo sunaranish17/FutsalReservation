@@ -60,9 +60,9 @@
          </li>
 
          <li class="sub-menu">
-           <a href="{{url('package')}}" class="">
+           <a href="{{url('rate')}}" class="">
              <i class="fa fa-files-o" aria-hidden="true"></i>
-             <span>package</span>
+             <span>rate</span>
            </a>
          </li>
 
@@ -81,9 +81,9 @@
          </li>
 
           <li>
-            <a class="" href="{{url('multimedia')}}">
+            <a class="" href="{{url('location')}}">
              <i class="fa fa-user" aria-hidden="true"></i>
-             <span>multimedia</span>
+             <span>location</span>
            </a>
          </li>
 

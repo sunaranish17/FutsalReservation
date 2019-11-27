@@ -36,3 +36,7 @@ Route::get('/logout','HomeController@logout');
 Route::get('/arena','ArenaController@index');
 Route::get('/setting','ArenaController@create');
 Route::post('/setting/update/{id}','ArenaController@update');
+Route::get('location','ArenaController@location');
+Route::post('location/update/{id}','ArenaController@locUpdate');
+Route::get('rate','ArenaController@rate');
+Route::post('rate/update/{id}','ArenaController@rateUpdate');
