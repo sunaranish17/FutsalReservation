@@ -67,7 +67,7 @@
          </li>
 
          <li class="sub-menu">
-           <a href="{{url('working hour')}}" class="">
+           <a href="{{url('working_hour')}}" class="">
              <i class="fa fa-sliders" aria-hidden="true"></i>
              <span>working hour</span>
            </a>

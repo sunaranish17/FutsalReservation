@@ -16,13 +16,17 @@ class CreateWorkingHoursTable extends Migration
         Schema::create('working_hours', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->integer('cid');
-            $table->time('Sunday');
-            $table->time('Monday');
-            $table->time('Tuesday');
-            $table->time('Wednesday');
-            $table->time('Thursday');
-            $table->time('Friday');
-            $table->time('Saturday');
+            $table->string('Sunday')->nullable();
+            $table->string('Monday')->nullable();
+            $table->string('Tuesday')->nullable();
+            $table->string('Wednesday')->nullable();
+            $table->string('Thursday')->nullable();
+            $table->string('Friday')->nullable();
+            $table->string('Saturday')->nullable();
+
+            $table->time('time_start');
+            $table->time('time_end');
+
             $table->timestamps();
         });
     }

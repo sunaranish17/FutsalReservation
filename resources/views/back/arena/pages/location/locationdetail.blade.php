@@ -15,7 +15,7 @@
          </div>
        </div>
        
-       @foreach($locdata as $locdata)
+       {{-- @foreach($locdatas as $locdata) --}}
           
        <form method="post" action="{{url('location/update')}}/{{$locdata->id}}" enctype="multipart/form-data">
         @csrf
@@ -51,14 +51,12 @@
                   <br>
                   <!-- End of Contact -->
 
-
-
                   <!-- City  -->
                   <div class="row">
                     <div class="col-md-3"><label >City:</label></div>
                     <div class="col-md-9"><input type="text" class="form-control" id="city"  name="city" value="{{$locdata->city}}"></div>
                   </div>
-                  </div>
+                  <br>
                   <!-- End of City -->
 
                   
@@ -67,29 +65,18 @@
                     <div class="col-md-3"><label >Ward:</label></div>
                     <div class="col-md-9"><input type="text" class="form-control" id="ward"  name="ward" value="{{$locdata->ward}}"></div>
                   </div>
-                  </div>
+                  <br>
                   <!-- End of Ward -->
-
                   
                   <!-- Tole  -->
                   <div class="row">
                     <div class="col-md-3"><label >Tole:</label></div>
                     <div class="col-md-9"><input type="text" class="form-control" id="tole"  name="tole" value="{{$locdata->tole}}"></div>
                   </div>
-                  </div>
+                  <br>
                   <!-- End of Tole -->
 
                 </div>
-              </div>
-              <!-- End of location Content -->
-              <br>
-
-            </div>
-      <!-- End of Left Content -->
-
-        </div>
-          <br>
-    <!-- End of Main Content Form -->
           
           <!-- Button Bar -->
           <div class="row">
@@ -105,7 +92,7 @@
           </div>
           <!-- End of Button Bar -->
         </form>
-        @endforeach
+        {{-- @endforeach --}}
      </section>
    </section>
 
