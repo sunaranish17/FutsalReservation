@@ -38,5 +38,8 @@ Route::get('/setting','ArenaController@create');
 Route::post('/setting/update/{id}','ArenaController@update');
 Route::get('location','ArenaController@location');
 Route::post('location/update/{id}','ArenaController@locUpdate');
+Route::get('working_hour','ArenaController@working_hour');
+Route::post('working_hour/update/{id}','ArenaController@working_hour_update');
+
 Route::get('rate','ArenaController@rate');
 Route::post('rate/update/{id}','ArenaController@rateUpdate');

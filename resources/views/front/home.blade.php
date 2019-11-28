@@ -51,7 +51,7 @@
 
 
 	<!-- contact -->
-	<section class="section-padding" id="contact">
+	<!-- <section class="section-padding" id="contact">
 		<div class="container">
 			<h1 class="heading">Contact</h1>
 			<div class="row">
@@ -83,6 +83,6 @@
 				
 			</div>
 		</div>
-	</section>
+	</section> -->
 	<!-- /contact -->
 @endsection

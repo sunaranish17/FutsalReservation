@@ -16,8 +16,6 @@
        </div>
        
        @foreach($data as $data)
-       
-       
           
        <form method="post" action="{{url('setting/update')}}/{{$data->id}}" enctype="multipart/form-data">
         @csrf
