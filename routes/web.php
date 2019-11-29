@@ -29,6 +29,7 @@ Route::get('pages/aboutfutshall', function () {
 Auth::routes();
 
 Route::get('/auths', 'HomeController@index')->name('auths');
+Route::get('/book/{id}', 'HomeController@book');
 Route::get('/logout','HomeController@logout');
 
 

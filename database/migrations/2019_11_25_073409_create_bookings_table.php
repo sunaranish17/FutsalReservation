@@ -17,7 +17,12 @@ class CreateBookingsTable extends Migration
             $table->bigIncrements('id');
             $table->integer('cid');
             $table->integer('cuid');
-            $table->time('shift');
+            $table->string('name');
+            $table->string('email');
+            $table->string('phone');
+            $table->date('date');
+            $table->time('time');
+            $table->string('message')->nullable;
             $table->timestamps();
         });
     }
