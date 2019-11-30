@@ -25,7 +25,15 @@ class ArenaController extends Controller
     public function index()
     {
         //
-         return view('back.arena.arena');
+
+        $query_item = DB::table('bookings')->where('cid', Auth::user()->id)->get();
+        return view('back.arena.arena', compact('query_item'));
+    }
+
+    public function indexDelete(Request $request, $id)
+    {
+        DB::table('bookings')->where('id', '=', $id)->delete();
+        return redirect('arena');
     }
 
     /**
@@ -35,15 +43,7 @@ class ArenaController extends Controller
      */
     public function create()
     {
-        //
         $uid = Auth::user()->id;
-
-
-        // $data = DB::table('companies')
-        // ->join('users', 'users.id', '=', 'companies.uid')
-        // ->where('companies.uid','=',$uid)
-        // ->get();
-
         $data = DB::table('companies')
         ->join('users','users.id','=','companies.uid')
         ->select('companies.*','users.name')

@@ -29,13 +29,18 @@ Route::get('pages/aboutfutshall', function () {
 Auth::routes();
 
 Route::get('/auths', 'HomeController@index')->name('auths');
-Route::get('/logout','HomeController@logout');
+Route::post('/book/{id}','HomeController@book');
+Route::get('/book1/{id}', 'HomeController@book1');
 
+Route::get('/logout','HomeController@logout');
 
 //ARENARa
 Route::get('/arena','ArenaController@index');
+Route::get('arena/delete/{id}','ArenaController@indexDelete');
+
 Route::get('/setting','ArenaController@create');
 Route::post('/setting/update/{id}','ArenaController@update');
+
 Route::get('location','ArenaController@location');
 Route::post('location/update/{id}','ArenaController@locUpdate');
 Route::get('working_hour','ArenaController@working_hour');
