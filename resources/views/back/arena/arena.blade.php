@@ -5,15 +5,6 @@
 <!--main content start-->
    <section id="main-content">
      <section class="wrapper">
-       <!--overview start-->
-       <div class="row">
-         <div class="col-lg-12">
-
-             <div class="col-md-6">
-              <li><i class="fa fa-home"></i><a href="{{url('admin')}}">Home</a> | location</li>
-              </div>
-         </div>
-       </div>
 
     <table class="table table-dark">
       <thead>

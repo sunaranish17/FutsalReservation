@@ -7,6 +7,7 @@ use App\User;
 use App\Booking;
 use Auth;
 use DB;
+use \Exception;
 
 class HomeController extends Controller
 {
@@ -39,21 +40,44 @@ class HomeController extends Controller
                 foreach($query_item as $q){
                     $sn = $q->id;
                     $name = $q->name;
-                    $city = DB::table('locations')->where('cid', $sn)->get()['0']->city;
-                    $tole = DB::table('locations')->where('cid', $sn)->get()['0']->tole;
-                    $time_start = DB::table('working_hours')->where('cid', $sn)->get()['0']->time_start;
-                    $time_end = DB::table('working_hours')->where('cid', $sn)->get()['0']->time_end;
+
+                    # Handle error if company didn't save detail 
+                    try {
+                        $city = DB::table('locations')->where('cid', $sn)->get()['0']->city;
+                    }
+                    catch (\Exception $e) {
+                        $city = "";
+                    }
+
+                    try {
+                        $tole = DB::table('locations')->where('cid', $sn)->get()['0']->tole;
+                    }
+                    catch (\Exception $e) {
+                        $tole = "";
+                    }
+
+                    try {
+                        $time_start = DB::table('working_hours')->where('cid', $sn)->get()['0']->time_start;
+                    }
+                    catch (\Exception $e) {
+                        $time_start = "";
+                    }
+
+                    try {
+                        $time_end = DB::table('working_hours')->where('cid', $sn)->get()['0']->time_end;
+                    }
+                    catch (\Exception $e) {
+                        $time_end = "";
+                    }
+                    /* $city = DB::table('locations')->where('cid', $sn)->get()['0']->city; */
+                    /* $tole = DB::table('locations')->where('cid', $sn)->get()['0']->tole; */
+                    /* $time_start = DB::table('working_hours')->where('cid', $sn)->get()['0']->time_start; */
+                    /* $time_end = DB::table('working_hours')->where('cid', $sn)->get()['0']->time_end; */
                     $time =  date('ha ', strtotime($time_start)) . "-" . date(' ha', strtotime($time_end));
-                    /* dd($time); */
 
                     $item = collect(['sn' => $sn, 'name' => $name, 'city' => $city, 'tole' => $tole, 'time' => $time]);
                     $items->push($item);
                 }
-
-                /* foreach($items as $c){ */
-                /*     dd($c); */
-                /* } */
-
                 return view('back.user.userdashboard',compact('items'));
             }
             else {
