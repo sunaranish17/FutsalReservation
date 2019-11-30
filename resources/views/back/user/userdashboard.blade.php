@@ -33,6 +33,7 @@
   width: 30%; /* Could be more or less, depending on screen size */
   }
   }
+
   h2, p {
   margin: 0 0 20px;
   font-weight: 400;
@@ -149,18 +150,17 @@
         <div id="{{$item['sn']}}" class="modal">
           <div class="modal-content">
             <div class="contact-form">
-              <form action="/">
+              <form method="POST" action="book/{{$item['sn']}}" enctype="multipart/form-data">
+              @csrf
                 <h2>Fill this form to book</h2>
                 <div>
-                  <input class="fname" type="text" name="name" placeholder="Full name">
-                  <input type="text" name="email" placeholder="Email">
                   <input type="text" name="phone" placeholder="Phone number">
                   <input type="date" name="date" placeholder="Date">
                   <input type="time" name="time" placeholder="Time">
                 </div>
                 <span>Message</span>
                 <div>
-                  <textarea rows="4"></textarea>
+                  <textarea name="message" rows="4"></textarea>
                 </div>
                 <button type="submit" href="/">Submit</button>
               </form>
